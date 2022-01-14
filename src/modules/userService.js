@@ -1,7 +1,22 @@
 /* jshint esversion: 6 */
 
 export class UserService {
-	_users = [];
+	_users = [
+		{
+			id: 0,
+			name: 'Mark',
+			email: 'otto@gmail.com',
+			children: true,
+			permissions: false,
+		},
+		{
+			id: 1,
+			name: 'Jacob',
+			email: 'thornton@gmail.com',
+			children: false,
+			permissions: true,
+		},
+	];
 
 	get users() {
 		return this._users;
@@ -14,8 +29,4 @@ export class UserService {
 	logger() {
 		console.log(this.users);
 	}
-}
-
-class Person {
-	a = 10;
 }

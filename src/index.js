@@ -1,8 +1,10 @@
 /* jshint esversion: 8 */
 
-import { first } from './modules/first';
-import { userService } from './modules/userService';
+import { render } from './modules/render';
+import { UserService } from './modules/userService';
 
 const userService = new UserService();
 
-first(userService);
+window.userService = new UserService();
+
+render(userService.users);
